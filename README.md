@@ -32,7 +32,14 @@ composer create-project vardot/varbase-project:8.8.x-dev PROJECT_DIR_NAME --stab
 
 ## [General instructions on how to update Varbase](https://github.com/Vardot/varbase/blob/8.x-8.x/UPDATE.md)
 
-## Drupal Console site install
+## Install (Docker)
+
+### Drush site-install
+
+./vessel drush site-install varbase --yes \
+ --...
+
+### Drupal Console site:install
 
 drupal site:install varbase \
  --langcode="en" \
@@ -41,7 +48,7 @@ drupal site:install varbase \
  --site-mail="admin@example.com" \
  --account-name="admin" \
  --account-mail="admin@example.com" \
- --account-pass="p455w0rd"
+ --account-pass="**password**"
 
 ./vessel exec app ./bin/drupal site:install varbase --force \
  --langcode="en" \
@@ -50,4 +57,4 @@ drupal site:install varbase \
  --site-mail="admin@example.com" \
  --account-name="admin" \
  --account-mail="admin@example.com" \
- --account-pass="p455w0rd"
+ --account-pass="**password**"

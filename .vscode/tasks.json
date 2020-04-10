@@ -4,12 +4,12 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "vessel: drush site-install",
+      "label": "vessel: 'drupal site:install'",
       "type": "shell",
-      "command": "./vessel drush site-install social --yes --db-url=mysql://anishnawbek:d3vp4ss321@db:3306/anishnawbek_social --site-name='Anishnawbek Social' --account-name=admin --account-pass=changeme --account-mail=admin@blackhole.io",
+      "command": "./vessel exec app ./bin/drupal site:install varbase --force --langcode='en'  --db-type='mysql'  --site-name='Dashboard CMS'  --site-mail='admin@example.com'  --account-name='admin'  --account-mail='admin@example.com'  --account-pass='p455w0rd'",
       "isBackground": true,
       "options": {
-        "cwd": "${workspaceRoot}/deps/dashboard-cms"
+        "cwd": "${workspaceRoot}"
       }
     },
     {
@@ -18,7 +18,7 @@
       "command": "./vessel start",
       "isBackground": true,
       "options": {
-        "cwd": "${workspaceRoot}/deps/dashboard-cms"
+        "cwd": "${workspaceRoot}"
       }
     },
     {
@@ -27,7 +27,7 @@
       "command": "./vessel stop",
       "isBackground": true,
       "options": {
-        "cwd": "${workspaceRoot}/deps/dashboard-cms"
+        "cwd": "${workspaceRoot}"
       }
     },
     {
@@ -36,7 +36,7 @@
       "command": "./vessel",
       // "isBackground": true,
       "options": {
-        "cwd": "${workspaceRoot}/deps/dashboard-cms"
+        "cwd": "${workspaceRoot}"
       }
     },
     {
@@ -45,7 +45,7 @@
       "command": "./vessel drush cr",
       "isBackground": false,
       "options": {
-        "cwd": "${workspaceRoot}/deps/dashboard-cms"
+        "cwd": "${workspaceRoot}"
       }
     },
     {
@@ -54,7 +54,7 @@
       "command": "./vessel drush updb",
       "isBackground": false,
       "options": {
-        "cwd": "${workspaceRoot}/deps/dashboard-cms"
+        "cwd": "${workspaceRoot}"
       }
     },
     {
@@ -65,10 +65,7 @@
         "command": "./node_modules/.bin/vue-cli-service.cmd"
       },
       "isBackground": true,
-      "args": [
-        "electron:serve",
-        "--debug"
-      ],
+      "args": ["electron:serve", "--debug"],
       "problemMatcher": {
         "owner": "custom",
         "pattern": {
