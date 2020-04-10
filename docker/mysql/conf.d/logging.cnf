@@ -1,0 +1,5 @@
+[mysqld]
+general-log = On
+general-log-file = /var/log/mysql/mysql.log
+
+max_allowed_packet = 100M

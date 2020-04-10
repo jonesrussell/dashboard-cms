@@ -1,0 +1,15 @@
+{
+  "sqltools.connections": [
+    {
+      "database": "russelljones",
+      "dialect": "MySQL",
+      "isActive": false,
+      "isConnected": false,
+      "name": "dashboard-cms",
+      "password": "d3vpass321",
+      "port": 16001,
+      "server": "localhost",
+      "username": "russelljones"
+    }
+  ]
+}
