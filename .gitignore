@@ -16,6 +16,8 @@ acquia-file
 
 .env
 
+dump*.sql
+
 # Ignore vim swp files and gedit temp files
 *.swp
 *.*~
