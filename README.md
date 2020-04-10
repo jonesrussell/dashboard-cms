@@ -42,3 +42,12 @@ drupal site:install varbase \
  --account-name="admin" \
  --account-mail="admin@example.com" \
  --account-pass="p455w0rd"
+
+./vessel exec app ./bin/drupal site:install varbase --force \
+ --langcode="en" \
+ --db-type="mysql" \
+ --site-name="Dashboard CMS" \
+ --site-mail="admin@example.com" \
+ --account-name="admin" \
+ --account-mail="admin@example.com" \
+ --account-pass="p455w0rd"

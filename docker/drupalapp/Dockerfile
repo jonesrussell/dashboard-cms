@@ -2,7 +2,9 @@ FROM ubuntu:18.04
 
 LABEL maintainer="Chris Fidao"
 
-RUN useradd -ms /bin/bash -u 1000 vessel
+ARG USERNAME=vessel
+
+RUN useradd -ms /bin/bash -u 1000 ${USERNAME}
 WORKDIR /var/www/html
 
 ENV TZ=UTC
@@ -37,13 +39,9 @@ RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt
   && sed -i "s/pm\.max_spare_servers = .*/pm.max_spare_servers = 10/" /etc/php/7.3/fpm/pool.d/www.conf \
   && echo "daemon off;" >> /etc/nginx/nginx.conf
 
-USER vessel
-
-RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-USER root
-
-RUN ln -sf /dev/stdout /var/log/nginx/access.log \
+RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+  && chmod 0440 /etc/sudoers.d/$USERNAME \
+  && ln -sf /dev/stdout /var/log/nginx/access.log \
   && ln -sf /dev/stderr /var/log/nginx/error.log
 
 COPY default /etc/nginx/sites-available/default
@@ -53,11 +51,15 @@ COPY vessel.ini /etc/php/7.3/fpm/conf.d/99-vessel.ini
 
 EXPOSE 80
 
+USER $USERNAME
+
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+USER root
+
+COPY --from=drush/drush /usr/local/bin/drush /usr/local/bin/drush
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY start-container /usr/local/bin/start-container
 RUN chmod +x /usr/local/bin/start-container
 
 ENTRYPOINT ["start-container"]
-
-COPY --from=drush/drush /usr/local/bin/drush /usr/local/bin/drush
-COPY --from=drupaldocker/console /usr/local/bin/drupal /usr/local/bin/drupal

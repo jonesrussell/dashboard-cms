@@ -1,0 +1,90 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "vessel: drush site-install",
+      "type": "shell",
+      "command": "./vessel drush site-install social --yes --db-url=mysql://anishnawbek:d3vp4ss321@db:3306/anishnawbek_social --site-name='Anishnawbek Social' --account-name=admin --account-pass=changeme --account-mail=admin@blackhole.io",
+      "isBackground": true,
+      "options": {
+        "cwd": "${workspaceRoot}/deps/dashboard-cms"
+      }
+    },
+    {
+      "label": "vessel: start",
+      "type": "shell",
+      "command": "./vessel start",
+      "isBackground": true,
+      "options": {
+        "cwd": "${workspaceRoot}/deps/dashboard-cms"
+      }
+    },
+    {
+      "label": "vessel: stop",
+      "type": "shell",
+      "command": "./vessel stop",
+      "isBackground": true,
+      "options": {
+        "cwd": "${workspaceRoot}/deps/dashboard-cms"
+      }
+    },
+    {
+      "label": "vessel: status",
+      "type": "shell",
+      "command": "./vessel",
+      // "isBackground": true,
+      "options": {
+        "cwd": "${workspaceRoot}/deps/dashboard-cms"
+      }
+    },
+    {
+      "label": "vessel: drush cr",
+      "type": "shell",
+      "command": "./vessel drush cr",
+      "isBackground": false,
+      "options": {
+        "cwd": "${workspaceRoot}/deps/dashboard-cms"
+      }
+    },
+    {
+      "label": "vessel: drush updb",
+      "type": "shell",
+      "command": "./vessel drush updb",
+      "isBackground": false,
+      "options": {
+        "cwd": "${workspaceRoot}/deps/dashboard-cms"
+      }
+    },
+    {
+      "label": "electron-debug",
+      "type": "process",
+      "command": "./node_modules/.bin/vue-cli-service",
+      "windows": {
+        "command": "./node_modules/.bin/vue-cli-service.cmd"
+      },
+      "isBackground": true,
+      "args": [
+        "electron:serve",
+        "--debug"
+      ],
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": {
+          "regexp": ""
+        },
+        "background": {
+          "beginsPattern": "Starting development server\\.\\.\\.",
+          "endsPattern": "Not launching electron as debug argument was passed\\."
+        }
+      }
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
