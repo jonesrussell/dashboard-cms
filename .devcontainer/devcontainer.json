@@ -1,0 +1,145 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.112.0/containers/docker-existing-docker-compose
+// If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
+{
+	"name": "Drupal 8",
+
+	// Update the 'dockerComposeFile' list if you have more compose files or use different names.
+	// The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"docker-compose.yml"
+	],
+
+	// The 'service' property is the name of the service for the container that VS Code should
+	// use. Update this value and .devcontainer/docker-compose.yml to the real service name.
+	"service": "app",
+
+	// The optional 'workspaceFolder' property is the path VS Code should open by default when
+	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
+	"workspaceFolder": "/workspace",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/zsh"
+	},
+
+	"extensions": [
+    "ms-azuretools.vscode-docker",
+		"p1c2u.docker-compose",
+		"delgee.sld-docker-builder",
+		"dunstontc.vscode-docker-syntax",
+		"tqrhsn.vscode-docker-registry-explorer",
+		"zamarrowski.docker-vulnerability-extension",
+		"dansnow.vscode-dockerfilelint",
+		"david-reis.dockerlive",
+		"ms-vscode-remote.remote-containers",
+		"jeff-hykin.better-dockerfile-syntax",
+		"balaprasanna.bala-bks-docker-snippets",
+		"marquesmps.dockerfile-validator",
+		"ms-vscode-remote.vscode-remote-extensionpack",
+		"foxundermoon.shell-format",
+		"aaron-bond.better-comments",
+		"adisreyaj.cicd-assistant",
+		"gogson.explorer-terminal-commands",
+		"bmuskalla.vscode-tldr",
+		"sncmn.hide-stream",
+		"recca0120.vscode-phpunit",
+    "dbaeumer.vscode-eslint",
+
+	"esbenp.prettier-vscode",
+	"octref.vetur",
+	"mikestead.dotenv",
+	"ibm.output-colorizer",
+	"mubaidr.vuejs-extension-pack",
+	"dariofuzinato.vue-peek",
+	"jcbuisson.vue",
+	"deerawan.vscode-faker",
+	"imagio.vscode-dimmer-block",
+	"firefox-devtools.vscode-firefox-debug",
+	"britesnow.vscode-toggle-quotes",
+	"gruntfuggly.todo-tree",
+	"cssho.vscode-svgviewer",
+	"jock.svg",
+	"adamwalzer.scss-lint",
+	"lukazakrajsek.scss-refactoring",
+	"mrmlnc.vscode-scss",
+	"humao.rest-client",
+	"numso.prettier-standard-vscode",
+	"mrmlnc.vscode-postcss-sorting",
+	"pnp.polacode",
+	"christian-kohler.path-intellisense",
+	"rubymaniac.vscode-paste-and-indent",
+	"42crunch.vscode-openapi",
+	"efog.open-faas-explorer",
+	"davidanson.vscode-markdownlint",
+	"shd101wyy.markdown-preview-enhanced",
+	"yzhang.markdown-all-in-one",
+	"tyriar.lorem-ipsum",
+	"slevesque.vscode-link",
+	"jackkcwong.jurl",
+	"cmstead.jsrefactor",
+	"lannonbr.vscode-js-annotations",
+	"xabikos.javascriptsnippets",
+	"zignd.html-css-class-completion",
+	"sirtori.indenticator",
+	"oderwat.indent-rainbow",
+	"idleberg.icon-fonts",
+	"jasonlhy.hungry-delete",
+	"ecmel.vscode-html-css",
+	"sidthesloth.html5-boilerplate",
+	"vincaslt.highlight-matching-tag",
+	"kameshkotwani.google-search",
+	"eamodio.gitlens",
+	"codezombiech.gitignore",
+	"felipecaputo.git-project-manager",
+	"mhutchie.git-graph",
+	"tombonnike.vscode-status-bar-format-toggle",
+	"lacroixdavid1.vscode-format-context-menu",
+	"usernamehw.errorlens",
+	"editorconfig.editorconfig",
+	"ms-azuretools.vscode-docker",
+	"msjsdiag.debugger-for-chrome",
+	"pranaygp.vscode-css-peek",
+	"hardikmodha.create-tests",
+	"bierner.color-info",
+	"naumovs.color-highlight",
+	"formulahendry.code-runner",
+	"wmaurer.change-case",
+	"ericadamski.carbon-now-sh",
+	"alefragnani.bookmarks",
+	"michelemelluso.code-beautifier",
+	"mgmcdermott.vscode-language-babel",
+	"atishay-jain.all-autocomplete",
+	"vscode-icons-team.vscode-icons",
+	"wayou.vscode-todo-highlight",
+	"naumovs.theme-oceanicnext",
+	"shan.code-settings-sync",
+	"ms-vscode-remote.vscode-remote-extensionpack",
+	"christian-kohler.npm-intellisense",
+	"coenraads.bracket-pair-colorizer-2",
+	"robberphex.php-debug",
+	"bmewburn.vscode-intelephense-client",
+	"rifi2k.format-html-in-php",
+	"junstyle.php-cs-fixer",
+	"kokororin.vscode-phpfmt",
+	"ikappas.phpcs",
+	"neilbrayfield.php-docblocker",
+	"mehedidracula.php-namespace-resolver",
+	"vsc-snippets.vsc-php-snippets",
+	"marcostazi.vs-code-drupal",
+	"dssiqueira.drupal-8-snippets"
+  ],
+
+	// Uncomment the next line if you want start specific services in your Docker Compose config.
+	"runServices": ["app", "mysql"],
+
+	// Uncomment the next line if you want to keep your containers running after VS Code shuts down.
+	// "shutdownAction": "none",
+
+	// Uncomment the next line to run commands after the container is created - for example installing git.
+	// "postCreateCommand": "apt-get update && apt-get install -y git",
+
+	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vessel"
+}
