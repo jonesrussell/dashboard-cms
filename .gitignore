@@ -48,3 +48,4 @@ errors.log
 vendor
 node_modules
 /vessel
+/config/auth
