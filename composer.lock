@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0813f75230bb6dbeaaef90cff1ec79c",
+    "content-hash": "f2715a466c64ba8568efd542a3d20b2a",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -10282,8 +10282,7 @@
             "homepage": "http://drupal.org/project/rdfui",
             "support": {
                 "source": "https://git.drupalcode.org/project/rdfui"
-            },
-            "time": "2016-08-21T04:34:51+00:00"
+            }
         },
         {
             "name": "drupal/recaptcha",
