@@ -6,7 +6,6 @@
   "editor.tabSize": 2,
   "editor.autoIndent": "full",
   "editor.insertSpaces": true,
-  "editor.formatOnPaste": true,
   "editor.formatOnSave": false,
   "editor.renderWhitespace": "boundary",
   "editor.wordWrapColumn": 120,
@@ -26,7 +25,6 @@
   },
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "html.format.enable": true,
   "html.format.wrapLineLength": 80,
   "telemetry.enableTelemetry": false,
 
@@ -65,6 +63,29 @@
       "server": "localhost",
       "username": "russelljones"
     }
-  ]
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.git/**": true,
+    "**/.svn/**": true,
+    "**/.hg/**": true,
+    "**/CVS/**": true,
+    "**/.DS_Store/**": true,
+    "**/bower_components/**": true,
+    "**/.config/**": true,
+    "**/.history/**": true,
+    "**/contrib/**": false,
+    "**/web/core/**": true
+  },
+  "explorerExclude.backup": null,
+  "editor.defaultFormatter": "vscode.php-language-features",
+  "editor.formatOnPaste": true,
+  "prettier.requirePragma": true,
+  "prettier.insertPragma": true,
+  "php-cs-fixer.rules": "Drupal"
 }
 

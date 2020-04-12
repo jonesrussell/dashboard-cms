@@ -7,7 +7,7 @@ ARG USERNAME=vessel
 RUN useradd -ms /bin/bash -u 1000 ${USERNAME}
 WORKDIR /var/www/html
 
-ENV TZ=UTC
+ENV TZ=America/Toronto
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN set -x \
@@ -51,11 +51,17 @@ COPY vessel.ini /etc/php/7.3/fpm/conf.d/99-vessel.ini
 
 EXPOSE 80
 
-USER $USERNAME
-
-RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Install oh-my-zsh
+USER ${USERNAME}
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" \
+  && mkdir -p /home/${USERNAME}/.composer
+# Setup Github auth token for composer
+COPY auth.json /home/${USERNAME}/.composer/
 
 USER root
+
+RUN curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \
+  && chmod +x /usr/local/bin/docker-compose
 
 COPY --from=drush/drush /usr/local/bin/drush /usr/local/bin/drush
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf

@@ -5,7 +5,7 @@
     "docker-compose.yml"
   ],
   "service": "app",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/var/www/html",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/zsh"
   },
@@ -32,12 +32,8 @@
     "recca0120.vscode-phpunit",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "octref.vetur",
     "mikestead.dotenv",
     "ibm.output-colorizer",
-    "mubaidr.vuejs-extension-pack",
-    "dariofuzinato.vue-peek",
-    "jcbuisson.vue",
     "deerawan.vscode-faker",
     "imagio.vscode-dimmer-block",
     "firefox-devtools.vscode-firefox-debug",
@@ -69,7 +65,6 @@
     "sirtori.indenticator",
     "oderwat.indent-rainbow",
     "idleberg.icon-fonts",
-    "jasonlhy.hungry-delete",
     "ecmel.vscode-html-css",
     "sidthesloth.html5-boilerplate",
     "vincaslt.highlight-matching-tag",

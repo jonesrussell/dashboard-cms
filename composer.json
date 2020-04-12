@@ -45,7 +45,9 @@
         "vardot/varbase": "~8.8.0",
         "vardot/varbase-updater": "~1.0",
         "drush/drush": "^10.2",
-        "drupal/console": "~1.0"
+        "drupal/console": "~1.0",
+        "drupal/rdfui": "1.x-dev",
+        "drupal/group": "^1.0"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",

@@ -49,3 +49,5 @@ vendor
 node_modules
 /vessel
 /config/auth
+auth.json
+

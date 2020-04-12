@@ -15,6 +15,7 @@ services:
       CONTAINER_ENV: "${CMS_ENV}"
       XDEBUG_HOST: "${XDEBUG_HOST}"
       WWWUSER: "${WWWUSER}"
+      COMPOSER_AUTH: "${COMPOSER_AUTH}"
       CMS_KEY: "${CMS_KEY}"
       DB_CONNECTION: "${DB_CONNECTION}"
       DB_HOST: "${DB_HOST}"
