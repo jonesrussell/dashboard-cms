@@ -57,7 +57,7 @@ services:
       - vesselmysql:/var/lib/mysql
       - ./docker/mysql/conf.d:/etc/mysql/conf.d
       - ./docker/mysql/logs:/var/log/mysql:rw
-        #      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql:ro
     networks:
       - vessel
 
