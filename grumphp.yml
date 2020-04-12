@@ -1,13 +1,13 @@
 parameters:
   ascii:
-    failed: vendor/vijaycs85/drupal-quality-checker/resources/ascii/grumpy.txt
-    succeeded: vendor/vijaycs85/drupal-quality-checker/resources/ascii/happy.txt
+    failed: config/lint/grumpy.txt
+    succeeded: config/lint/happy.txt
   git_dir: .
   bin_dir: vendor/bin
   tasks:
     phplint: ~
     yamllint: ~
     composer: ~
-    # jsonlint: ~
+    jsonlint: ~
     phpcs:
       standard: Drupal
