@@ -3,15 +3,19 @@ FROM ubuntu:18.04
 LABEL maintainer="Chris Fidao"
 
 ARG USERNAME=vessel
+ARG PHPV=7.3
 
 RUN useradd -ms /bin/bash -u 1000 ${USERNAME}
 WORKDIR /var/www/html
 
 ENV TZ=America/Toronto
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime && echo ${TZ} > /etc/timezone
 
 RUN set -x \
   && apt-get update && apt-get install -y gnupg gosu \
+  && apt-get -y autoremove \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
   && gosu nobody true
 
 RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt/sources.list.d/ppa_ondrej_php.list \
@@ -20,34 +24,33 @@ RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt
   && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C300EE8C \
   && apt-get update \
   && apt-get install -y curl zip unzip git supervisor sqlite3 zsh sudo \
-  && apt-get install -y nginx php7.3-fpm php7.3-cli \
-  php7.3-pgsql php7.3-sqlite3 php7.3-gd \
-  php7.3-curl php7.3-memcached \
-  php7.3-imap php7.3-mysql php7.3-mbstring \
-  php7.3-xml php7.3-zip php7.3-bcmath php7.3-soap \
-  php7.3-intl php7.3-readline php7.3-xdebug \
-  php7.3-msgpack php7.3-igbinary php7.3-ldap \
+  && apt-get install -y nginx php${PHPV}-fpm php${PHPV}-cli \
+  php${PHPV}-pgsql php${PHPV}-sqlite3 php${PHPV}-gd \
+  php${PHPV}-curl php${PHPV}-memcached \
+  php${PHPV}-imap php${PHPV}-mysql php${PHPV}-mbstring \
+  php${PHPV}-xml php${PHPV}-zip php${PHPV}-bcmath php${PHPV}-soap \
+  php${PHPV}-intl php${PHPV}-readline php${PHPV}-xdebug \
+  php${PHPV}-msgpack php${PHPV}-igbinary php${PHPV}-ldap \
   php-redis libnginx-mod-http-uploadprogress \
-  && php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
   && mkdir /run/php \
   && apt-get -y autoremove \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-  && sed -i "s/pm\.max_children = .*/pm.max_children = 20/" /etc/php/7.3/fpm/pool.d/www.conf \
-  && sed -i "s/pm\.start_servers = .*/pm.start_servers = 10/" /etc/php/7.3/fpm/pool.d/www.conf \
-  && sed -i "s/pm\.min_spare_servers = .*/pm.min_spare_servers = 5/" /etc/php/7.3/fpm/pool.d/www.conf \
-  && sed -i "s/pm\.max_spare_servers = .*/pm.max_spare_servers = 10/" /etc/php/7.3/fpm/pool.d/www.conf \
+  && sed -i "s/pm\.max_children = .*/pm.max_children = 20/" /etc/php/${PHPV}/fpm/pool.d/www.conf \
+  && sed -i "s/pm\.start_servers = .*/pm.start_servers = 10/" /etc/php/${PHPV}/fpm/pool.d/www.conf \
+  && sed -i "s/pm\.min_spare_servers = .*/pm.min_spare_servers = 5/" /etc/php/${PHPV}/fpm/pool.d/www.conf \
+  && sed -i "s/pm\.max_spare_servers = .*/pm.max_spare_servers = 10/" /etc/php/${PHPV}/fpm/pool.d/www.conf \
   && echo "daemon off;" >> /etc/nginx/nginx.conf
 
-RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
-  && chmod 0440 /etc/sudoers.d/$USERNAME \
+RUN echo ${USERNAME} ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${USERNAME} \
+  && chmod 0440 /etc/sudoers.d/${USERNAME} \
   && ln -sf /dev/stdout /var/log/nginx/access.log \
   && ln -sf /dev/stderr /var/log/nginx/error.log
 
 COPY default /etc/nginx/sites-available/default
-COPY php-fpm.conf /etc/php/7.3/fpm/php-fpm.conf
-COPY xdebug.ini /etc/php/7.3/mods-available/xdebug.ini
-COPY vessel.ini /etc/php/7.3/fpm/conf.d/99-vessel.ini
+COPY php-fpm.conf /etc/php/${PHPV}/fpm/php-fpm.conf
+COPY xdebug.ini /etc/php/${PHPV}/mods-available/xdebug.ini
+COPY vessel.ini /etc/php/${PHPV}/fpm/conf.d/99-vessel.ini
 
 EXPOSE 80
 
@@ -55,13 +58,14 @@ EXPOSE 80
 USER ${USERNAME}
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" \
   && mkdir -p /home/${USERNAME}/.composer
-# Setup Github auth token for composer
-COPY auth.json /home/${USERNAME}/.composer/
-
 USER root
 
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+COPY auth.json /home/${USERNAME}/.composer/
+
 RUN curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \
-  && chmod +x /usr/local/bin/docker-compose
+  && chmod +x /usr/local/bin/docker-compose \
+  && chown ${USERNAME} /home/${USERNAME}/.composer/auth.json
 
 COPY --from=drush/drush /usr/local/bin/drush /usr/local/bin/drush
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
