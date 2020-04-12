@@ -50,4 +50,5 @@ node_modules
 /vessel
 /config/auth
 auth.json
-
+/update_backups
+.update-error-log
