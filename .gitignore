@@ -52,3 +52,5 @@ node_modules
 auth.json
 /update_backups
 .update-error-log
+/private
+
