@@ -1,0 +1,19 @@
+uuid: 3cec401e-5800-4a6e-83a9-90992b3c2b70
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: aE6KpUFyoEgWWKTGGhqy8mrGktmmaGLl4PISfKGmfPU
+name: d10_square
+label: 'Display 10 (1000xSquare 1:1)'
+effects:
+  0ad7ffcc-777f-4747-a8e5-7b9b71aaee6b:
+    uuid: 0ad7ffcc-777f-4747-a8e5-7b9b71aaee6b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 1000
+      crop_type: focal_point

@@ -1,0 +1,37 @@
+uuid: 20ff9bfb-0ce6-4c86-8ea0-73fc2cca888c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bp_tab_section.bp_tab_section_body
+    - field.field.paragraph.bp_tab_section.bp_tab_section_title
+    - paragraphs.paragraphs_type.bp_tab_section
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: d8tWl4L6kGqix3cQjOLAQzpaDj-Ny0UqHZ8VYQrfJLM
+id: paragraph.bp_tab_section.default
+targetEntityType: paragraph
+bundle: bp_tab_section
+mode: default
+content:
+  bp_tab_section_body:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  bp_tab_section_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  created: true
+  uid: true

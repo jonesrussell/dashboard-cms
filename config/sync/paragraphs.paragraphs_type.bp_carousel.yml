@@ -1,0 +1,17 @@
+uuid: c05d56cc-4740-4552-9816-41aebc97d36c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: OT8bVoKt4CLAJFdFifflyUvbsMW5_t7GKdIxXlv17Ck
+id: bp_carousel
+label: Carousel
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

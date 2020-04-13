@@ -1,0 +1,17 @@
+uuid: 9162e58a-1ef2-41bd-a347-31fe2bd3ebd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: nfLmmH4ReN8J7wAYPVSqiUQ0kGRs1rP89I9emTEucxI
+id: text_and_image
+label: 'Text and image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

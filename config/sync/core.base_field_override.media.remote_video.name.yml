@@ -1,0 +1,22 @@
+uuid: a82c2dd6-0ae8-4fd6-bb06-30fc2fd3193d
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+_core:
+  default_config_hash: HB61nPRNWA63cfXxe8g_bKVtNvXf9DfZ1J8lP3ybtSs
+id: media.remote_video.name
+field_name: name
+entity_type: media
+bundle: remote_video
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

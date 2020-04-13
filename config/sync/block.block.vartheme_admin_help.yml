@@ -1,0 +1,22 @@
+uuid: 6616d1c9-d2c3-456d-8f2e-bf9ad2a4b294
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - vartheme_admin
+_core:
+  default_config_hash: ZcK2OmL-mmbk-qFAj4ahwz_4wn04GTW8E4pDxre0SGo
+id: vartheme_admin_help
+theme: vartheme_admin
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

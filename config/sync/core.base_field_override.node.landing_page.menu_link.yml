@@ -1,0 +1,22 @@
+uuid: 72708021-ed94-494b-8440-04447378b059
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+_core:
+  default_config_hash: VPim_9L72oDvTW7K9g7td2dtJNb7WQdGTxNda2e98nU
+id: node.landing_page.menu_link
+field_name: menu_link
+entity_type: node
+bundle: landing_page
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

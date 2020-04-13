@@ -1,0 +1,17 @@
+uuid: 4c553143-5951-4dca-81d3-f5d668c5c11e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: 51LAXoA8XH5GgQld0HUll4UmrYFw_8VIpDE7UXAyBj8
+id: bp_columns_three_uneven
+label: 'Columns (Three Uneven)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

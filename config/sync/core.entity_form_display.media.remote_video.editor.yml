@@ -1,0 +1,38 @@
+uuid: 615440b6-0f18-4814-9ff7-b175724244cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.editor
+    - field.field.media.remote_video.field_media_cover_image
+    - field.field.media.remote_video.field_media_in_library
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_provider
+    - media.type.remote_video
+  module:
+    - media
+_core:
+  default_config_hash: YoIiTRE2lo2NoazzHaxgEl6Dw1eSDX_7s2MfNHrYm34
+id: media.remote_video.editor
+targetEntityType: media
+bundle: remote_video
+mode: editor
+content:
+  field_media_oembed_video:
+    type: oembed_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_cover_image: true
+  field_media_in_library: true
+  field_provider: true
+  name: true
+  path: true
+  preview: true
+  status: true
+  uid: true

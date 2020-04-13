@@ -1,0 +1,12 @@
+uuid: fb19cc3e-1b44-465a-accd-fec5655de628
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: LU8kcuR2YZcTfFavSdnx-vGQpQjulp2uJzM9iPsB7k0
+id: media.s05_standard
+label: 'Size 05 standard 16:9'
+targetEntityType: media
+cache: true

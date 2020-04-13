@@ -1,0 +1,11 @@
+id: galaxy_tab_s4
+uuid: 93cc69e4-b937-4dab-97c3-0a4fa054e861
+label: 'Galaxy Tab S4'
+weight: -6
+status: 1
+orientation: portrait
+dimensions:
+  width: 1600
+  height: 2560
+  dppx: !!float 2
+langcode: en

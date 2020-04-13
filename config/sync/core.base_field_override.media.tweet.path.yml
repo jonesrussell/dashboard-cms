@@ -1,0 +1,22 @@
+uuid: 1541f199-1973-48f6-ab07-42b0226c66b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.tweet
+  module:
+    - path
+_core:
+  default_config_hash: OYOpAgtYUTIc2Kl2x7z-Ip8iMPPHeh9HCPKdK_2IWSo
+id: media.tweet.path
+field_name: path
+entity_type: media
+bundle: tweet
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

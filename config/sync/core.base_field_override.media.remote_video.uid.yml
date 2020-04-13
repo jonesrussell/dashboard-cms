@@ -1,0 +1,22 @@
+uuid: d37762b2-f686-4a4d-8503-104f090406a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+_core:
+  default_config_hash: iV5Zfw7K4vQ3KgsVqgHuryoJfDRIU6vIrSt4G3xfKKE
+id: media.remote_video.uid
+field_name: uid
+entity_type: media
+bundle: remote_video
+label: 'Authored by'
+description: 'The user ID of the author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,36 @@
+uuid: d2a7f780-7b62-4d66-bed1-3ea006a48ad2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.editor
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - image.style.field_preview
+    - media.type.image
+  module:
+    - focal_point
+_core:
+  default_config_hash: Nw4wMYaE9jF490fFYGqXPkTs2hoReCHtbtTP4P6U5Gc
+id: media.image.editor
+targetEntityType: media
+bundle: image
+mode: editor
+content:
+  field_media_image:
+    settings:
+      preview_image_style: field_preview
+      progress_indicator: throbber
+      preview_link: true
+      offsets: '50,50'
+    third_party_settings: {  }
+    type: image_focal_point
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_in_library: true
+  name: true
+  path: true
+  status: true
+  uid: true

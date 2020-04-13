@@ -1,0 +1,25 @@
+uuid: f47e7af4-144e-4a55-8e11-77322ffa3462
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_title_status
+    - paragraphs.paragraphs_type.bp_columns_two_uneven
+_core:
+  default_config_hash: pQBDCm3h4UcEJUXCLlP9i_YxDg2DDkayqGqZ5P8wSaA
+id: paragraph.bp_columns_two_uneven.bp_title_status
+field_name: bp_title_status
+entity_type: paragraph
+bundle: bp_columns_two_uneven
+label: 'Don''t show title on page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

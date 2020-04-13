@@ -1,0 +1,12 @@
+uuid: 4f7dad68-f6c0-4ff0-9715-f6e64b119aaa
+langcode: en
+status: true
+dependencies:
+  module:
+    - page_manager
+_core:
+  default_config_hash: qHzyP5Jvt3l540GgpPIoMhlc8VBxwxCFeY8mB3ImpDE
+id: page_variant.token
+label: Token
+targetEntityType: page_variant
+cache: true

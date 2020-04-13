@@ -1,0 +1,19 @@
+uuid: 9937c24f-ed5f-4039-bd86-afd7ee88b8a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: _8IbzY_oqo8C3vGh0uNBFayP_1wWty-unMe8l8QKudo
+name: social_large
+label: 'Social Large (1200x630)'
+effects:
+  6f3025d1-8060-44a9-9986-047580dbc25e:
+    uuid: 6f3025d1-8060-44a9-9986-047580dbc25e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 630
+      crop_type: focal_point

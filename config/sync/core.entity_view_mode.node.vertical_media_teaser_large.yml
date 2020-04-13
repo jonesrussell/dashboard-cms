@@ -1,0 +1,12 @@
+uuid: 43dc312d-f988-4c0b-ad7b-70589188ce57
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: QMd549Kob8GPEm6fR0NQdckM_-NoTKruwMlnxFhKvxM
+id: node.vertical_media_teaser_large
+label: 'Vertical media teaser - large'
+targetEntityType: node
+cache: true

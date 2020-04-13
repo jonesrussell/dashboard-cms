@@ -1,0 +1,21 @@
+uuid: b25b09dc-fdbf-431e-bc56-3567a1446f09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_title
+    - paragraphs.paragraphs_type.bp_simple
+_core:
+  default_config_hash: GTMTRE-wociGOvCGXUKIp96jS6IPzYuzEPr1k_G8860
+id: paragraph.bp_simple.bp_title
+field_name: bp_title
+entity_type: paragraph
+bundle: bp_simple
+label: 'Component title'
+description: 'Fill in a title for this component to appear on the page, or just use it for editorial reference if you check the "Don''t show title on page" checkbox below.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

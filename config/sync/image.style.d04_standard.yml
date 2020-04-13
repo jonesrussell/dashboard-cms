@@ -1,0 +1,19 @@
+uuid: da93f675-2a60-4244-8ca7-7b30f3cb36ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: kWrOpbq9C79TZynkwJqHyf56xqnnmQjUI0TFttWskws
+name: d04_standard
+label: 'Display 04 (400xStandard 16:9)'
+effects:
+  3d9a74d2-82a0-4399-aedc-c9b6a46e7aa1:
+    uuid: 3d9a74d2-82a0-4399-aedc-c9b6a46e7aa1
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 225
+      crop_type: focal_point

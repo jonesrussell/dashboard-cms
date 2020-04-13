@@ -1,0 +1,22 @@
+uuid: 291d9d8c-30e4-47c3-a867-a60545f8ec70
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - vartheme_bs4
+_core:
+  default_config_hash: j05pbKuj9Wfop3Rz2aVCBO6oM-Gft11rqwxbMttWr50
+id: vartheme_bs4_help
+theme: vartheme_bs4
+region: help
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

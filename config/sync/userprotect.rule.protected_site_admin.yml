@@ -1,0 +1,43 @@
+uuid: 1452aa95-c541-4b8a-aac4-a602420dd7a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.site_admin
+  module:
+    - user
+_core:
+  default_config_hash: 6Lh9L1oxApgUYQfhgRsO_xd_hlW_oA41FHtJVqVICsI
+name: protected_site_admin
+label: 'Protected site admin'
+protectedEntityTypeId: user_role
+protectedEntityId: site_admin
+protections:
+  user_pass:
+    id: user_pass
+    provider: userprotect
+    status: true
+  user_edit:
+    id: user_edit
+    provider: userprotect
+    status: true
+  user_delete:
+    id: user_delete
+    provider: userprotect
+    status: true
+  user_mail:
+    id: user_mail
+    provider: userprotect
+    status: true
+  user_roles:
+    id: user_roles
+    provider: userprotect
+    status: true
+  user_status:
+    id: user_status
+    provider: userprotect
+    status: true
+  user_name:
+    id: user_name
+    provider: userprotect
+    status: true

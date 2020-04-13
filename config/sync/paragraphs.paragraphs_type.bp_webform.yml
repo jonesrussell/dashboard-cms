@@ -1,0 +1,17 @@
+uuid: 937b0ae6-cfbc-4a4f-8624-89db025a5b42
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: KuvI9ijgHGioAyfxskQGmp6_mUtHwns7fRLEOhxEeP8
+id: bp_webform
+label: Webform
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

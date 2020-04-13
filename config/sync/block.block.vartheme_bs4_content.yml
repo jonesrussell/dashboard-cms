@@ -1,0 +1,22 @@
+uuid: 762c5a91-f4f6-47d6-bba7-22021fa192b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vartheme_bs4
+_core:
+  default_config_hash: mS1K-W63vdB25CSOM72vmLfoogqrd5cjLggOk5Yt0fw
+id: vartheme_bs4_content
+theme: vartheme_bs4
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

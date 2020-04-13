@@ -1,0 +1,19 @@
+uuid: 16f5fdcb-414a-43b1-8c06-d5560a3291eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: 8L0IGjlPhTRqbvo8z0G4pakoAgbzDFIB_tqAM3dMUrA
+name: social_medium
+label: 'Social Medium (600x315)'
+effects:
+  e7a4dd87-2cb7-41ce-bb7a-893f8336c315:
+    uuid: e7a4dd87-2cb7-41ce-bb7a-893f8336c315
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 315
+      crop_type: focal_point

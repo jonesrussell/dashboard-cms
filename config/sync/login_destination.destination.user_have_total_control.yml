@@ -1,0 +1,21 @@
+uuid: ba625824-d5e9-4078-9870-2e906168e069
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: txxJJv4LnZpUbbqq5gJQZPDy62D6Ikjgcnn2PIYZo4o
+name: user_have_total_control
+label: 'User have total control'
+triggers:
+  login: login
+destination_path: 'internal:/admin/dashboard'
+pages_type: 0
+pages: ''
+language: ''
+roles:
+  editor: editor
+  content_admin: content_admin
+  site_admin: site_admin
+  administrator: administrator
+weight: 0
+enabled: true

@@ -1,0 +1,10 @@
+access_token_expiration: 300
+authorization_code_expiration: 300
+refresh_token_expiration: 1209600
+remember_clients: true
+token_cron_batch_size: 0
+use_implicit: false
+_core:
+  default_config_hash: lhknqI_UWOrAbQH9SLBSF7MVG-hc49r4GShA8pFG4gY
+private_key: ../config/auth/ac85fe67d87404e5213f3fb83df9ab7b278ead2619e6f275678aa04a6fa7cba7.key
+public_key: ../config/auth/151d752630e7ac6fe73b5379fad8e480c8f63a93c9e73b7bd3abe6086a94203e.key

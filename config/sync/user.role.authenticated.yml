@@ -1,0 +1,23 @@
+uuid: c2cfe05d-8c4c-4d12-bc18-44c525566f93
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: snStYMRrDXocH43hoZyKs9deZlnyB6ZzFOt5HkvNJQ8
+id: authenticated
+label: 'Authenticated user'
+weight: -9
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access shortcuts'
+  - 'access sitemap'
+  - 'access tour'
+  - 'access user profiles'
+  - 'bypass honeypot protection'
+  - 'search content'
+  - 'use text format basic_html'
+  - userprotect.account.edit
+  - userprotect.mail.edit
+  - userprotect.pass.edit
+  - 'view media'

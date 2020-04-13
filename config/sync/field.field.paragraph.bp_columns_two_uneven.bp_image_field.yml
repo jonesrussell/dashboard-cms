@@ -1,0 +1,30 @@
+uuid: b27112bf-6c3d-43d2-982e-54f270295c6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_image_field
+    - media.type.image
+    - paragraphs.paragraphs_type.bp_columns_two_uneven
+_core:
+  default_config_hash: KDYzgkKOfopueKERPnwm9h8jUqZtmpMycIPdK83RBA0
+id: paragraph.bp_columns_two_uneven.bp_image_field
+field_name: bp_image_field
+entity_type: paragraph
+bundle: bp_columns_two_uneven
+label: 'Background image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

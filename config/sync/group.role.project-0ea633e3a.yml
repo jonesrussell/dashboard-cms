@@ -1,0 +1,17 @@
+uuid: e8e532f6-054a-47ba-a1b7-9d790259b84f
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.project
+  enforced:
+    config:
+      - user.role.seo_admin
+id: project-0ea633e3a
+label: 'SEO Admin'
+weight: -6
+internal: true
+audience: outsider
+group_type: project
+permissions_ui: false
+permissions: {  }

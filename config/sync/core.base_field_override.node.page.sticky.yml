@@ -1,0 +1,24 @@
+uuid: a9d2c877-a759-47d0-8f85-9e669bf9f0cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+_core:
+  default_config_hash: PZ6BfAew4oWAbmcqB8d4w6-PUIZQ4mGQiGVlMSNFvGs
+id: node.page.sticky
+field_name: sticky
+entity_type: node
+bundle: page
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

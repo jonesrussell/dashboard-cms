@@ -1,0 +1,23 @@
+uuid: eafc58a2-dd34-4dd3-8eb8-b3ce353bebc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_background
+    - paragraphs.paragraphs_type.bp_columns_three_uneven
+  module:
+    - options
+_core:
+  default_config_hash: pvc9FVmCLNlaj4r0va00pzpxelx2G8CNZmZvUidbWRk
+id: paragraph.bp_columns_three_uneven.bp_background
+field_name: bp_background
+entity_type: paragraph
+bundle: bp_columns_three_uneven
+label: 'Background color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

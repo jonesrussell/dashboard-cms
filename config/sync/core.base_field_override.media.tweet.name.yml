@@ -1,0 +1,22 @@
+uuid: 461606ba-7aee-48d0-bebe-c0af44bc6de9
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.tweet
+_core:
+  default_config_hash: Uz7W2AUn3FasPZt8uNbBep24WEsu-7-a__dDmGhbjKk
+id: media.tweet.name
+field_name: name
+entity_type: media
+bundle: tweet
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

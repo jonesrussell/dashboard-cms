@@ -1,0 +1,19 @@
+uuid: 6c2fd0f1-0ec4-4d1a-91df-6794a2f85c07
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: ocBoh_5Akz2NS9O6TdmoPMvXb_YfltdqUQLNRcOSQLQ
+name: d02_traditional
+label: 'Display 02 (200xTraditional 4:3)'
+effects:
+  c0326178-af99-4c55-aabf-918acbd07f64:
+    uuid: c0326178-af99-4c55-aabf-918acbd07f64
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 150
+      crop_type: focal_point

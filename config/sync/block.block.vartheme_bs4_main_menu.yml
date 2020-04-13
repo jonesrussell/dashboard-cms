@@ -1,0 +1,27 @@
+uuid: 794a68a0-5953-46f5-9d69-72cc3c66ffeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - vartheme_bs4
+_core:
+  default_config_hash: KTM9Juu7IvF1o7_GA5EAuY5tv5GEW0bKGYsrzgX6pVo
+id: vartheme_bs4_main_menu
+theme: vartheme_bs4
+region: navigation_collapsible
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

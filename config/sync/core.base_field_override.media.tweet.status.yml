@@ -1,0 +1,24 @@
+uuid: 1721b343-475c-4cb3-8522-965e3b8d3b86
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.tweet
+_core:
+  default_config_hash: lv2pkUNufPrDUMUHdiAwAVxANfmbua--CzdotMoc61o
+id: media.tweet.status
+field_name: status
+entity_type: media
+bundle: tweet
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

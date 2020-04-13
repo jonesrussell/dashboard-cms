@@ -1,0 +1,25 @@
+uuid: f5e7d310-8281-4a75-acda-ff93bbe9c722
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_title_status
+    - paragraphs.paragraphs_type.bp_view
+_core:
+  default_config_hash: QWQ0ovmkcfXx2VFl1RVVjdssdt-1oIJBCxMAdbeXNGc
+id: paragraph.bp_view.bp_title_status
+field_name: bp_title_status
+entity_type: paragraph
+bundle: bp_view
+label: 'Don''t show title on page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,30 @@
+uuid: d8ee4639-bd20-4377-ae53-e4c0e7e2c862
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_image_field
+    - media.type.image
+    - paragraphs.paragraphs_type.bp_view
+_core:
+  default_config_hash: ufTQlv7cCo7wi-LNGaWXSKuH663ZcmSoXkNW8ySC1YA
+id: paragraph.bp_view.bp_image_field
+field_name: bp_image_field
+entity_type: paragraph
+bundle: bp_view
+label: 'Background image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

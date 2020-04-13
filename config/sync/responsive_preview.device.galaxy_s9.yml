@@ -1,0 +1,11 @@
+id: galaxy_s9
+uuid: a30d46d3-6c65-4e54-8c52-858e4b7600da
+label: 'Galaxy S9'
+weight: -8
+status: 1
+orientation: portrait
+dimensions:
+  width: 1440
+  height: 2960
+  dppx: !!float 4
+langcode: en

@@ -1,0 +1,19 @@
+uuid: 7b1b2948-054c-42f7-af9b-3a241eac41f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: fsMtdOg2A1T8ig0r2MkBRYfUi_C3_AHxrwCuKFq81L4
+name: de2e_4_1_md
+label: 'Display Edge-to-Edge 4:1 max md'
+effects:
+  8b69b2ed-83e1-4240-a797-e4137b0d2c59:
+    uuid: 8b69b2ed-83e1-4240-a797-e4137b0d2c59
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 300
+      crop_type: focal_point

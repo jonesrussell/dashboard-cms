@@ -1,0 +1,32 @@
+uuid: b055a349-3b1c-4be8-97c4-cb4a28b2537b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.simplified
+    - field.field.media.tweet.field_media_in_library
+    - field.field.media.tweet.field_media_twitter
+    - media.type.tweet
+_core:
+  default_config_hash: cvJEyF7X0AMxfjbmodpAqauR9aTEWf3wFW_Aq9XEsCc
+id: media.tweet.simplified
+targetEntityType: media
+bundle: tweet
+mode: simplified
+content:
+  field_media_twitter:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_media_in_library: true
+  name: true
+  path: true
+  preview: true
+  status: true
+  uid: true

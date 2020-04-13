@@ -1,0 +1,25 @@
+uuid: e57e9f5c-ed61-4211-92c1-95d639fdbdbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_gutter
+    - paragraphs.paragraphs_type.bp_simple
+_core:
+  default_config_hash: mJciTBz00RYnCSJQ9lgybrMfCQXycjRZYyn8Sy1aMrA
+id: paragraph.bp_simple.bp_gutter
+field_name: bp_gutter
+entity_type: paragraph
+bundle: bp_simple
+label: Gutter
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'With gutter'
+  off_label: 'Without gutter'
+field_type: boolean

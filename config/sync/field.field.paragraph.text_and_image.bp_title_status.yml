@@ -1,0 +1,25 @@
+uuid: d8dfab1a-692a-4079-894a-07bfa3d16200
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_title_status
+    - paragraphs.paragraphs_type.text_and_image
+_core:
+  default_config_hash: ONw3f9N0Ec_XqjZt05J5gKp2gbZ9twzOcUr1SKGLCn8
+id: paragraph.text_and_image.bp_title_status
+field_name: bp_title_status
+entity_type: paragraph
+bundle: text_and_image
+label: 'Don''t show title on page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

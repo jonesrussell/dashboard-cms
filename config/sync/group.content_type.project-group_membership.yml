@@ -1,0 +1,17 @@
+uuid: 9908a30e-eb8b-4c4f-96f7-489013dbc9ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.project
+  module:
+    - user
+id: project-group_membership
+label: 'Project: Group membership'
+description: 'Adds users to groups as members.'
+group_type: project
+content_plugin: group_membership
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

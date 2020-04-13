@@ -1,0 +1,11 @@
+uuid: 75d7cbcd-6ab8-4720-95c3-f12948517c4b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yoYo6bveN5gbVlNuMV06-fJEQ8EiHgWxQPkwjmeoHj8
+id: node__landing_page
+label: 'Content: Landing page'
+tags:
+  title: '[node:title] | [site:name]'
+  description: '[node:field_description]'

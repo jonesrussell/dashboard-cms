@@ -1,0 +1,26 @@
+uuid: af97a60a-5c01-4aa1-b426-e62313103232
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d04
+    - image.style.d08
+  module:
+    - varbase_media
+_core:
+  default_config_hash: N3Wt1bf78SS0rEgfyl1Gz8I8996WLclTSbXeeb99YhY
+id: d04
+label: 'Display 04 responsive auto'
+image_style_mappings:
+  -
+    breakpoint_id: varbase_media.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d08
+  -
+    breakpoint_id: varbase_media.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d04
+breakpoint_group: varbase_media
+fallback_image_style: d04

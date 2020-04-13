@@ -1,0 +1,25 @@
+uuid: fcb8ddf2-365e-4408-aacc-85b40e610c0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_in_library
+    - media.type.tweet
+_core:
+  default_config_hash: 1T0uQ5CC_e4oNLkzXhZoGaUuvveXtejaXIxyKCKdEOQ
+id: media.tweet.field_media_in_library
+field_name: field_media_in_library
+entity_type: media
+bundle: tweet
+label: 'Show in media library'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

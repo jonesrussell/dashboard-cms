@@ -1,0 +1,19 @@
+uuid: 7249d50f-5116-40c9-b15b-a30a1b9409ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: xZ1dAM0eUOlyBpzS59IeNzL2xB0v2QqK1Ij-yKI5__k
+name: d01_square
+label: 'Display 01 (100xSquare 1:1)'
+effects:
+  fa44cb56-fc93-429e-ad94-5c3aa97df73a:
+    uuid: fa44cb56-fc93-429e-ad94-5c3aa97df73a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      crop_type: focal_point

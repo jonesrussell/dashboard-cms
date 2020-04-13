@@ -1,0 +1,43 @@
+uuid: eba13ae1-7fb8-4d26-8c8c-107b422cc27f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.administrator
+  module:
+    - user
+_core:
+  default_config_hash: qhs3tF48pD1JLKXXeWixdiy2snkqKCKC-GPPdcm04-4
+name: protected_super_admin
+label: 'Protected super admin'
+protectedEntityTypeId: user_role
+protectedEntityId: administrator
+protections:
+  user_pass:
+    id: user_pass
+    provider: userprotect
+    status: true
+  user_edit:
+    id: user_edit
+    provider: userprotect
+    status: true
+  user_delete:
+    id: user_delete
+    provider: userprotect
+    status: true
+  user_mail:
+    id: user_mail
+    provider: userprotect
+    status: true
+  user_roles:
+    id: user_roles
+    provider: userprotect
+    status: true
+  user_status:
+    id: user_status
+    provider: userprotect
+    status: true
+  user_name:
+    id: user_name
+    provider: userprotect
+    status: true

@@ -1,0 +1,54 @@
+uuid: 9445dd6e-77c5-4161-8e81-6bf28b510540
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.tweet.field_media_in_library
+    - field.field.media.tweet.field_media_twitter
+    - media.type.tweet
+_core:
+  default_config_hash: nWBzp1gvFe4LQO4oewXCqg6OjrU6KK1i85PsR9W3UdY
+id: media.tweet.default
+targetEntityType: media
+bundle: tweet
+mode: default
+content:
+  field_media_in_library:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_media_twitter:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  preview:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  uid: true

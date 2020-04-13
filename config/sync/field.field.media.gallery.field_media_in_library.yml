@@ -1,0 +1,25 @@
+uuid: 4bb3a309-27d1-4010-8144-af8659fa6fce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_in_library
+    - media.type.gallery
+_core:
+  default_config_hash: '-Z831PiKvWNNODvqeXjbtDYcscqqKkwvvHH5QApf1mE'
+id: media.gallery.field_media_in_library
+field_name: field_media_in_library
+entity_type: media
+bundle: gallery
+label: 'Show in media library'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,14 @@
+uuid: b0df715a-7ff6-4691-9fd2-f0cf223d4b2c
+name: 'Dashboard CMS'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

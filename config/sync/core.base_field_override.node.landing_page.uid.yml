@@ -1,0 +1,22 @@
+uuid: 02b249f5-e9a1-4fcf-9e5b-27a3dc673e85
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+_core:
+  default_config_hash: S2R3CndMyFXMG5pbd_Dad3r2WW7tikuMaI8kahjguII
+id: node.landing_page.uid
+field_name: uid
+entity_type: node
+bundle: landing_page
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

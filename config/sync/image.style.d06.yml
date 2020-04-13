@@ -1,0 +1,17 @@
+uuid: de87f920-f3a6-48e4-901c-1c2d2fdb74ae
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Oh9_B94JWgutPRjSxuANLoSORfORWpesjq6VKg1wZtY
+name: d06
+label: 'Display 06 (600xAuto)'
+effects:
+  db20a7f4-5f9d-45d3-b420-286324cdcb91:
+    uuid: db20a7f4-5f9d-45d3-b420-286324cdcb91
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: null
+      upscale: false

@@ -1,0 +1,11 @@
+id: large
+uuid: d40fbc57-3b11-4d4c-82bf-6d30d067aade
+label: 'Typical desktop'
+weight: 0
+status: 0
+orientation: landscape
+dimensions:
+  width: 1366
+  height: 768
+  dppx: 1
+langcode: en

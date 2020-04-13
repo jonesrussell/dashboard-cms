@@ -1,0 +1,14 @@
+uuid: 82fb47fa-5650-4e9d-91a6-21182d4a2144
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: EkEmFxRopjqcnBoZf1qRSPFvPqiSSU8hZMUCmCfgZkI
+id: standard_16_9
+label: 'Standard 16:9'
+description: '16:9 The most common aspect ratio for televisions and computer monitors, and is also the international standard format of HDTV, Full HD'
+aspect_ratio: '16:9'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

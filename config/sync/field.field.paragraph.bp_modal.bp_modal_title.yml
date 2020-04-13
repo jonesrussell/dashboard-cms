@@ -1,0 +1,21 @@
+uuid: 92699a02-fd3d-45c4-b2e5-7eb10b9b319d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_modal_title
+    - paragraphs.paragraphs_type.bp_modal
+_core:
+  default_config_hash: HkHQ3d5naHIdlFJltcJPaP4pDeLnmoNtW4xG1KaLFFY
+id: paragraph.bp_modal.bp_modal_title
+field_name: bp_modal_title
+entity_type: paragraph
+bundle: bp_modal
+label: 'Modal title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,17 @@
+uuid: 5a6b6efd-e9fc-4180-929f-704a1859b894
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: qI-AWQxyomFUU8CG7oE7mq2vdPJVwKoj71uypqzci6M
+id: bp_columns_two_uneven
+label: 'Columns (Two Uneven)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

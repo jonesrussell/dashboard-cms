@@ -1,0 +1,22 @@
+uuid: ccf41a1d-2c5a-4460-8505-2c9c324a6ee9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: mjy5VYh4Dksz4gKGbjqegtbJCnGCP6r7dumVhfheb0s
+id: linkit_all_nodes
+label: 'Linkit: All Nodes'
+description: ''
+attributes: {  }
+matchers:
+  bc3b1ccd-ac4e-4c5c-901d-d90449d9d974:
+    uuid: bc3b1ccd-ac4e-4c5c-901d-d90449d9d974
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: true
+      include_unpublished: false

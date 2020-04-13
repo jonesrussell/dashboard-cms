@@ -1,0 +1,40 @@
+uuid: f30a78a3-938b-4c7d-aeb1-57121b8ae07f
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.media.small
+    - field.field.media.tweet.field_media_in_library
+    - field.field.media.tweet.field_media_twitter
+    - media.type.tweet
+  module:
+    - ds
+    - media_entity_twitter
+_core:
+  default_config_hash: hEUWuUjYJYrLjg_eSkW4ER33jMmzOb7U6SDlAMJ9Fxk
+id: media.tweet.small
+targetEntityType: media
+bundle: tweet
+mode: small
+content:
+  field_media_twitter:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: twitter_embed
+    region: content
+hidden:
+  created: true
+  field_media_in_library: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

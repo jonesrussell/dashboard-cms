@@ -1,0 +1,32 @@
+uuid: 77dcaae0-dd49-428f-8fc8-a0f30bb58614
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d08_square
+    - image.style.d10_square
+    - image.style.d12_square
+  module:
+    - varbase_media
+_core:
+  default_config_hash: CX_-6u3853Nj32nzcKss8IjPRcre9rURs2q2pcAgaI8
+id: d12_square
+label: 'Display 12 responsive square 1:1'
+image_style_mappings:
+  -
+    breakpoint_id: varbase_media.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d08_square
+  -
+    breakpoint_id: varbase_media.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d10_square
+  -
+    breakpoint_id: varbase_media.screen-lg-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d12_square
+breakpoint_group: varbase_media
+fallback_image_style: d08_square

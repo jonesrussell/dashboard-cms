@@ -1,0 +1,17 @@
+uuid: 18dda1d4-f71c-4184-b2e4-1e41c2fc8680
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: SBWiEaOW2Y6QYI8dZPrEm0SgtCceLeX-jkO0yjL02AI
+id: bp_accordion
+label: Accordion
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

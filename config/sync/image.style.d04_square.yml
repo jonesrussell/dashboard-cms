@@ -1,0 +1,19 @@
+uuid: 4ff4f985-ab63-43b0-8e69-fa7934893e70
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: otNrjCKkKscbg-nk6sBDhV3e_bQKXh8CQAR8lG1O0ao
+name: d04_square
+label: 'Display 04 (400xSquare 1:1)'
+effects:
+  e0e9be76-fed5-4051-bac5-5402f5b8ec34:
+    uuid: e0e9be76-fed5-4051-bac5-5402f5b8ec34
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      crop_type: focal_point

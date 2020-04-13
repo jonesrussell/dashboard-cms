@@ -1,0 +1,17 @@
+uuid: 87ce0c62-ed91-4002-9576-46340d52a68e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: nGGIwQYJAgi6Z53F8V3wZGtrrh5fTuXLLpTzqusUVvE
+id: bp_block
+label: 'Drupal Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

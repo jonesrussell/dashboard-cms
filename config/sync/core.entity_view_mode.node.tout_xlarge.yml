@@ -1,0 +1,12 @@
+uuid: cc291226-7c5c-4854-beee-cedb5175ae9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: bdcpG_0v-wafRpGDS6TshlwGITk5eOwlZIO9Xzk2mUk
+id: node.tout_xlarge
+label: 'Tout - xlarge'
+targetEntityType: node
+cache: true

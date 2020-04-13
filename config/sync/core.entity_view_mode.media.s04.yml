@@ -1,0 +1,12 @@
+uuid: a1979612-44cc-4463-88e8-33763750ce03
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: IxwEe_jR-Z561lxgWw5lI95IVO12tjclAuPvfhblHSA
+id: media.s04
+label: 'Size 04 auto'
+targetEntityType: media
+cache: true

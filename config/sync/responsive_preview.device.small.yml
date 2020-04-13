@@ -1,0 +1,11 @@
+id: small
+uuid: e499aa21-b0d1-47f6-ae48-533d8c85cca6
+label: 'Smart phone'
+weight: 0
+status: 0
+orientation: portrait
+dimensions:
+  width: 768
+  height: 1280
+  dppx: 2
+langcode: en

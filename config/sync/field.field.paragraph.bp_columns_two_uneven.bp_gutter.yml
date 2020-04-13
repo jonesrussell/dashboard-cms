@@ -1,0 +1,25 @@
+uuid: 0211433c-ebaa-41ae-89cd-e0a95601695b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_gutter
+    - paragraphs.paragraphs_type.bp_columns_two_uneven
+_core:
+  default_config_hash: 7X2AxVbkt57OehtLm_sLCpmm_O_Qrikw05iZEMv30tk
+id: paragraph.bp_columns_two_uneven.bp_gutter
+field_name: bp_gutter
+entity_type: paragraph
+bundle: bp_columns_two_uneven
+label: Gutter
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'With gutter'
+  off_label: 'Without gutter'
+field_type: boolean

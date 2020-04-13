@@ -1,0 +1,12 @@
+uuid: 64edb2c5-cee2-4375-963d-89477147e4e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: gHDRJgovaAIQsKYXz6e_gneJUJ2V_8XDTQg_rTw7oT8
+id: media.s02_standard
+label: 'Size 02 standard 16:9'
+targetEntityType: media
+cache: true

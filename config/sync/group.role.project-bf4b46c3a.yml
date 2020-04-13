@@ -1,0 +1,17 @@
+uuid: 04a8eb95-0347-473c-a932-2c092749ebd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.project
+  enforced:
+    config:
+      - user.role.site_admin
+id: project-bf4b46c3a
+label: 'Site Admin'
+weight: -5
+internal: true
+audience: outsider
+group_type: project
+permissions_ui: false
+permissions: {  }

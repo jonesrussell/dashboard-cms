@@ -1,0 +1,25 @@
+uuid: 7e429af6-f080-4dd5-aca3-a978d259e77d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_in_library
+    - media.type.audio
+_core:
+  default_config_hash: fuz_8CvKGrjhy4FhSWggboL82vG1WChCacIsOqMQ6Qk
+id: media.audio.field_media_in_library
+field_name: field_media_in_library
+entity_type: media
+bundle: audio
+label: 'Show in media library'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

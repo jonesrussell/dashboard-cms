@@ -1,0 +1,22 @@
+uuid: 1581a67c-6a70-4c83-938f-596435d4f764
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.tweet
+_core:
+  default_config_hash: cJUToFyJnA7YvLRak53q_9SJe2y01Nbc1FJbrOZF6wc
+id: media.tweet.uid
+field_name: uid
+entity_type: media
+bundle: tweet
+label: 'Authored by'
+description: 'The user ID of the author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

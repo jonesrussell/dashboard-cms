@@ -1,0 +1,19 @@
+uuid: a0a5b6cb-2cae-418f-a71d-15a303f2c42d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: TCZnaYhA5QMCNFquoY0PM5Izl0hly1kT2FstNGPvt6M
+name: de2e_traditional
+label: 'Display Edge-to-Edge traditional 4:3'
+effects:
+  fe9f0543-efc5-4d0e-af8e-cc754eb78405:
+    uuid: fe9f0543-efc5-4d0e-af8e-cc754eb78405
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 1200
+      crop_type: focal_point

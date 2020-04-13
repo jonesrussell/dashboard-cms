@@ -1,0 +1,21 @@
+uuid: e637b4a7-9722-40ae-8f85-b21116f9a520
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_title
+    - paragraphs.paragraphs_type.bp_columns
+_core:
+  default_config_hash: C3zPyJxONjmvIwScJdaRPwGhiW5rB_-i2D2it4OvBV8
+id: paragraph.bp_columns.bp_title
+field_name: bp_title
+entity_type: paragraph
+bundle: bp_columns
+label: 'Component title'
+description: 'Fill in a title for this component to appear on the page, or just use it for editorial reference if you check the "Don''t show title on page" checkbox below.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

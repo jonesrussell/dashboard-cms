@@ -1,0 +1,17 @@
+uuid: dcc25274-3b35-4eed-b063-b42ada335d6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.project
+  enforced:
+    config:
+      - user.role.content_admin
+id: project-8af8a0e50
+label: 'Content Admin'
+weight: -7
+internal: true
+audience: outsider
+group_type: project
+permissions_ui: false
+permissions: {  }

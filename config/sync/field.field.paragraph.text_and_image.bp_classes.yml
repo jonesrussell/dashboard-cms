@@ -1,0 +1,21 @@
+uuid: b8efd0de-7e81-481b-80c2-c6b89ae2cc2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_classes
+    - paragraphs.paragraphs_type.text_and_image
+_core:
+  default_config_hash: _MWv_c9UDIxgMbs_vkRtSITAs_3d9oQ3vexgclSiwis
+id: paragraph.text_and_image.bp_classes
+field_name: bp_classes
+entity_type: paragraph
+bundle: text_and_image
+label: 'CSS class(es)'
+description: 'Customize the styling by adding CSS classes. Separate multiple classes by spaces.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

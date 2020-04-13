@@ -1,0 +1,23 @@
+uuid: 2a50f84b-6edf-413b-bce6-38e4edad7c8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_image_field
+    - paragraphs.paragraphs_type.bp_image
+_core:
+  default_config_hash: M1dh-EZXvar1LZ1Y7-tR9WaL__8-l5kvxM-z7BRKgPU
+id: paragraph.bp_image.bp_image_field
+field_name: bp_image_field
+entity_type: paragraph
+bundle: bp_image
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings: {  }
+field_type: entity_reference

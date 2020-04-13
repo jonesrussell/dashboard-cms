@@ -1,0 +1,25 @@
+uuid: fdb0928b-ff04-4cc4-80ba-803d855bc4b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vartheme_bs4
+_core:
+  default_config_hash: NNfGuQymclxJa34vSbMeSqjMChId-AFFdozfp_Y4NPM
+id: vartheme_bs4_branding
+theme: vartheme_bs4
+region: navigation
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

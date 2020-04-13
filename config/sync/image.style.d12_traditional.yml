@@ -1,0 +1,19 @@
+uuid: c65e2198-2be6-4a25-ac3f-376b6a167880
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: eXjA6PKyFSNfT-58PAhD-kV6uhkPuce07U-o0XavJkM
+name: d12_traditional
+label: 'Display 12 (1200xTraditional 4:3)'
+effects:
+  448c0291-0918-4cc3-8432-d4d5beacc8bb:
+    uuid: 448c0291-0918-4cc3-8432-d4d5beacc8bb
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 900
+      crop_type: focal_point

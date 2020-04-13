@@ -1,0 +1,12 @@
+uuid: 3f131339-3fee-467a-b36c-4bd99b96cb36
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: pxZc7vcgIjtSWkCKrFEm82QaZIDtLmAN61lu9c_PJBE
+id: node.vertical_media_teaser_xsmall
+label: 'Vertical media teaser - xsmall'
+targetEntityType: node
+cache: true
