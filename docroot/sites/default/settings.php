@@ -532,6 +532,7 @@ if ($settings['hash_salt']) {
  * about securing private files.
  */
 # $settings['file_private_path'] = '';
+$settings['file_private_path'] = $app_root . '/../private';
 
 /**
  * Temporary file path:
