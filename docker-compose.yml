@@ -1,4 +1,5 @@
 version: "3"
+
 services:
   app:
     image: vessel/drupal
@@ -27,19 +28,11 @@ services:
       REDIS_PASSWORD: "${REDIS_PASSWORD}"
       REDIS_BASE: "${REDIS_BASE}"
       REDIS_PORT: "${REDIS_PORT}"
-      MINIO_PORT: "${MINIO_PORT}"
-      MINIO_ACCESS_KEY: "${MINIO_ACCESS_KEY}"
-      MINIO_SECRET_KEY: "${MINIO_SECRET_KEY}"
-      MINIO_REGION: "${MINIO_REGION}"
-      MINIO_BUCKET: "${MINIO_BUCKET}"
-      MINIO_ENDPOINT: "${MINIO_ENDPOINT}"
-      MINIO_PREFIX: "${MINIO_PREFIX}"
     volumes:
       - .:/var/www/html
     depends_on:
       - mysql
       - redis
-      - minio
 
   mysql:
     image: mysql:5.7
@@ -91,37 +84,37 @@ services:
   #      - vessel
   #      - messages
 
-  minio:
-    image: minio/minio
-    # container_name: minio
-    # hostname: minio
-    ports:
-      - "${MINIO_PORT}:9000"
-    volumes:
-      - vesselminio:/data
-    environment:
-      - "MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}"
-      - "MINIO_SECRET_KEY=${MINIO_SECRET_KEY}"
-      - "MINIO_REGION=${MINIO_REGION}"
-    command: server /data
-    networks:
-      - vessel
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
-      interval: 30s
-      timeout: 20s
-      retries: 3
-
-  mailhog:
-    image: mailhog/mailhog
-    env_file:
-      - .env
-    ports:
-      - "1025"
-      - "${MAILHOG_WWW_PORT}:8025"
-    networks:
-      - vessel
-      - messages
+#  minio:
+#    image: minio/minio
+#    # container_name: minio
+#    # hostname: minio
+#    ports:
+#      - "${MINIO_PORT}:9000"
+#    volumes:
+#      - vesselminio:/data
+#    environment:
+#      - "MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}"
+#      - "MINIO_SECRET_KEY=${MINIO_SECRET_KEY}"
+#      - "MINIO_REGION=${MINIO_REGION}"
+#    command: server /data
+#    networks:
+#      - vessel
+#    healthcheck:
+#      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+#      interval: 30s
+#      timeout: 20s
+#      retries: 3
+#
+#  mailhog:
+#    image: mailhog/mailhog
+#    env_file:
+#      - .env
+#    ports:
+#      - "1025"
+#      - "${MAILHOG_WWW_PORT}:8025"
+#    networks:
+#      - vessel
+#      - messages
 
 networks:
   vessel:
@@ -134,5 +127,5 @@ volumes:
     driver: "local"
   vesselredis:
     driver: "local"
-  vesselminio:
-    driver: "local"
+#  vesselminio:
+#    driver: "local"
