@@ -31,7 +31,7 @@ RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt
   php${PHPV}-xml php${PHPV}-zip php${PHPV}-bcmath php${PHPV}-soap \
   php${PHPV}-intl php${PHPV}-readline php${PHPV}-xdebug \
   php${PHPV}-msgpack php${PHPV}-igbinary php${PHPV}-ldap \
-  php-redis libnginx-mod-http-uploadprogress \
+  php-redis libnginx-mod-http-uploadprogress wget \
   && mkdir /run/php \
   && apt-get -y autoremove \
   && apt-get clean \
@@ -67,7 +67,9 @@ RUN curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-c
   && chmod +x /usr/local/bin/docker-compose \
   && chown ${USERNAME} /home/${USERNAME}/.composer/auth.json
 
-COPY --from=drush/drush /usr/local/bin/drush /usr/local/bin/drush
+# COPY --from=drush/drush /usr/local/bin/drush /usr/local/bin/drush
+RUN wget -O /usr/local/bin/drush https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar \
+  && chmod +x /usr/local/bin/drush
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY start-container /usr/local/bin/start-container
 RUN chmod +x /usr/local/bin/start-container
