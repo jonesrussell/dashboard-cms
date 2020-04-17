@@ -84,6 +84,6 @@
   "prettier.requirePragma": true,
   "prettier.insertPragma": true,
   "php-cs-fixer.rules": "Drupal",
-  "phpstan.path": "${rootPath}/vendor/phpstan/phpstan/phpstan"
+  "phpstan.path": "/home/russell/Development/Dashboard/dashboard-cms/vendor/phpstan/phpstan/phpstan"
 }
 
