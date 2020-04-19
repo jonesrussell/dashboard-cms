@@ -42,6 +42,7 @@
         "drupal/drupal-library-installer-plugin": "^0.3",
         "drupal/group": "^1.0",
         "drupal/rdfui": "1.x-dev",
+        "drupal/redis": "^1.4",
         "drush/drush": "^9.0.0",
         "oomphinc/composer-installers-extender": "~1.0",
         "vardot/varbase": "~8.8.0",
