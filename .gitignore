@@ -54,3 +54,5 @@ auth.json
 .update-error-log
 /private
 
+composer.json
+phpinfo.php
