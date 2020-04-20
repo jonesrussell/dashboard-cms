@@ -34,7 +34,6 @@
       "label": "vessel: status",
       "type": "shell",
       "command": "./vessel",
-      // "isBackground": true,
       "options": {
         "cwd": "${workspaceRoot}"
       }
@@ -52,6 +51,15 @@
       "label": "vessel: drush updb",
       "type": "shell",
       "command": "./vessel drush updb",
+      "isBackground": false,
+      "options": {
+        "cwd": "${workspaceRoot}"
+      }
+    },
+    {
+      "label": "vessel: zsh",
+      "type": "shell",
+      "command": "./vessel exec --user vessel app zsh",
       "isBackground": false,
       "options": {
         "cwd": "${workspaceRoot}"
