@@ -14,24 +14,50 @@
         "issues": "http://drupal.org/project/issues/varbase",
         "source": "http://cgit.drupalcode.org/varbase"
     },
-    "repositories": {
-        "drupal": {
+    "repositories": [
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        "assets": {
+        {
             "type": "composer",
             "url": "https://asset-packagist.org"
         },
-        "composer-patches": {
+        {
             "type": "vcs",
             "url": "https://github.com/vardot/composer-patches"
         },
-        "vessel": {
+        {
             "type": "vcs",
             "url": "https://github.com/jonesrussell/vessel"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "d3/d3",
+                "version": "v3.5.17",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/d3/d3.git",
+                    "type": "git",
+                    "reference": "tags/v3.5.17"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "highlightjs/highlightjs",
+                "version": "9.7.0",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/highlightjs/highlight.js.git",
+                    "type": "git",
+                    "reference": "tags/9.7.0"
+                }
+            }
         }
-    },
+    ],
     "require": {
         "php": ">=7.0.8",
         "composer/installers": "~1.0",
@@ -41,6 +67,7 @@
         "drupal/core-project-message": "^8.8.0",
         "drupal/drupal-library-installer-plugin": "^0.3",
         "drupal/group": "^1.0",
+        "drupal/mail_safety": "^1.0",
         "drupal/rdfui": "1.x-dev",
         "drupal/redis": "^1.4",
         "drush/drush": "^9.0.0",
