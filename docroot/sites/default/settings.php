@@ -629,7 +629,7 @@ $settings['file_private_path'] = $app_root . '/../private';
  * configuration values in settings.php will not fire any of the configuration
  * change events.
  */
-# $config['system.site']['name'] = 'My Drupal site';
+$config['system.site']['name'] = getenv('CMS_NAME');
 # $config['user.settings']['anonymous'] = 'Visitor';
 
 /**
@@ -663,6 +663,7 @@ $settings['file_private_path'] = $app_root . '/../private';
  * Load services definition file.
  */
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+// $settings['container_yamls'][] = 'modules/redis/example.services.yml';
 
 /**
  * Override the default service container class.
@@ -719,8 +720,8 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * example.org, with all subdomains included.
  */
 $settings['trusted_host_patterns'] = [
-//    '^www\.example\.com$',
-    '^localhost$',
+  //    '^www\.example\.com$',
+  '^localhost$',
 ];
 
 /**
@@ -762,14 +763,12 @@ $settings['entity_update_backup'] = TRUE;
  *
  * cache and queues
  */
-/*
 $settings['redis.connection']['interface'] = getenv('REDIS_INTERFACE');
 $settings['redis.connection']['host'] = getenv('REDIS_HOST');
 $settings['redis.connection']['password'] = getenv('REDIS_PASSWORD');
 $settings['redis.connection']['base'] = getenv('REDIS_BASE');
-$settings['cache']['default'] = 'cache.backend.redis';
-$settings['queue_default'] = 'queue.redis';
-*/
+//$settings['cache']['default'] = 'cache.backend.redis';
+//$settings['queue_default'] = 'queue.redis';
 
 /**
  * Flysystem / Minio
