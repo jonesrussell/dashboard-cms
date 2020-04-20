@@ -663,7 +663,7 @@ $config['system.site']['name'] = getenv('CMS_NAME');
  * Load services definition file.
  */
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
-// $settings['container_yamls'][] = 'modules/redis/example.services.yml';
+$settings['container_yamls'][] = 'modules/redis/example.services.yml';
 
 /**
  * Override the default service container class.
@@ -767,8 +767,8 @@ $settings['redis.connection']['interface'] = getenv('REDIS_INTERFACE');
 $settings['redis.connection']['host'] = getenv('REDIS_HOST');
 $settings['redis.connection']['password'] = getenv('REDIS_PASSWORD');
 $settings['redis.connection']['base'] = getenv('REDIS_BASE');
-//$settings['cache']['default'] = 'cache.backend.redis';
-//$settings['queue_default'] = 'queue.redis';
+$settings['cache']['default'] = 'cache.backend.redis';
+$settings['queue_default'] = 'queue.redis';
 
 /**
  * Flysystem / Minio
