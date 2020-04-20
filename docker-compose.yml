@@ -23,11 +23,6 @@ services:
       DB_DATABASE: "${DB_DATABASE}"
       DB_USERNAME: "${DB_USERNAME}"
       DB_PASSWORD: "${DB_PASSWORD}"
-      REDIS_INTERFACE: "${REDIS_INTERFACE}"
-      REDIS_HOST: "${REDIS_HOST}"
-      REDIS_PASSWORD: "${REDIS_PASSWORD}"
-      REDIS_BASE: "${REDIS_BASE}"
-      REDIS_PORT: "${REDIS_PORT}"
     volumes:
       - .:/var/www/html
     depends_on:
@@ -84,37 +79,35 @@ services:
   #      - vessel
   #      - messages
 
-#  minio:
-#    image: minio/minio
-#    # container_name: minio
-#    # hostname: minio
-#    ports:
-#      - "${MINIO_PORT}:9000"
-#    volumes:
-#      - vesselminio:/data
-#    environment:
-#      - "MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}"
-#      - "MINIO_SECRET_KEY=${MINIO_SECRET_KEY}"
-#      - "MINIO_REGION=${MINIO_REGION}"
-#    command: server /data
-#    networks:
-#      - vessel
-#    healthcheck:
-#      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
-#      interval: 30s
-#      timeout: 20s
-#      retries: 3
-#
-#  mailhog:
-#    image: mailhog/mailhog
-#    env_file:
-#      - .env
-#    ports:
-#      - "1025"
-#      - "${MAILHOG_WWW_PORT}:8025"
-#    networks:
-#      - vessel
-#      - messages
+  minio:
+    image: minio/minio
+    ports:
+      - "${MINIO_PORT}:9000"
+    volumes:
+      - vesselminio:/data
+    environment:
+      - "MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}"
+      - "MINIO_SECRET_KEY=${MINIO_SECRET_KEY}"
+      - "MINIO_REGION=${MINIO_REGION}"
+    command: server /data
+    networks:
+      - vessel
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+
+  mailhog:
+    image: mailhog/mailhog
+    env_file:
+      - .env
+    ports:
+      - "1025"
+      - "${MAILHOG_WWW_PORT}:8025"
+    networks:
+      - vessel
+      - messages
 
 networks:
   vessel:
@@ -127,5 +120,5 @@ volumes:
     driver: "local"
   vesselredis:
     driver: "local"
-#  vesselminio:
-#    driver: "local"
+  vesselminio:
+    driver: "local"
