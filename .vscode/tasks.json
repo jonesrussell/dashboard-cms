@@ -64,6 +64,15 @@
       }
     },
     {
+      "label": "vessel: zsh",
+      "type": "shell",
+      "command": "./vessel exec --user vessel app ./bin/update-varbase.sh",
+      "isBackground": false,
+      "options": {
+        "cwd": "${workspaceRoot}"
+      }
+    },
+    {
       "label": "electron-debug",
       "type": "process",
       "command": "./node_modules/.bin/vue-cli-service",
