@@ -64,9 +64,18 @@
       }
     },
     {
-      "label": "vessel: zsh",
+      "label": "vessel: update-varbase.sh",
       "type": "shell",
       "command": "./vessel exec --user vessel app ./bin/update-varbase.sh",
+      "isBackground": false,
+      "options": {
+        "cwd": "${workspaceRoot}"
+      }
+    },
+    {
+      "label": "vessel: logs",
+      "type": "shell",
+      "command": "./vessel logs -f",
       "isBackground": false,
       "options": {
         "cwd": "${workspaceRoot}"
