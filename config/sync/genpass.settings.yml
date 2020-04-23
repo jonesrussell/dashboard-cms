@@ -1,5 +1,5 @@
-genpass_length: 12
-genpass_algorithm: genpass
+genpass_length: 8
+genpass_algorithm: user
 genpass_mode: 1
 genpass_display: 0
 _core:

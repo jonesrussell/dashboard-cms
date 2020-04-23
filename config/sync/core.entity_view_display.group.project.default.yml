@@ -1,0 +1,36 @@
+uuid: a3de9356-f58a-4853-9964-21df40639006
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.project.field_banner
+    - group.type.project
+  module:
+    - image
+id: group.project.default
+targetEntityType: group
+bundle: project
+mode: default
+content:
+  field_banner:
+    weight: -4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  label:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  search_api_excerpt: true
+  uid: true

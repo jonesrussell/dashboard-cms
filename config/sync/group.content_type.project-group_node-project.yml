@@ -1,0 +1,19 @@
+uuid: 86c8dfe6-9f3c-4cc9-aa65-03a9dcf293bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.project
+    - node.type.project
+  module:
+    - gnode
+    - node
+id: project-group_node-project
+label: 'Project: Group node (Project)'
+description: 'Adds <em class="placeholder">Project</em> content to groups both publicly and privately.'
+group_type: project
+content_plugin: 'group_node:project'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

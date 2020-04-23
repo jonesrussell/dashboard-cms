@@ -1,0 +1,14 @@
+uuid: 18857e70-c135-4649-961b-b90bbc276c61
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.project
+  module:
+    - node
+id: node.project
+targetEntityType: node
+bundle: project
+types:
+  - ''
+fieldMappings: {  }

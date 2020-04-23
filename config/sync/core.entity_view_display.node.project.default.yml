@@ -1,0 +1,29 @@
+uuid: f25e7693-57b3-4ec7-bce3-f97ebb3fb01a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.project.body
+    - node.type.project
+  module:
+    - text
+    - user
+id: node.project.default
+targetEntityType: node
+bundle: project
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

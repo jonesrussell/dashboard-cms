@@ -1,0 +1,24 @@
+uuid: d04f4d61-55fe-4de7-8f48-49f3dae3fcbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group_content.project-group_node-project.field_name
+    - group.content_type.project-group_node-project
+id: group_content.project-group_node-project.default
+targetEntityType: group_content
+bundle: project-group_node-project
+mode: default
+content:
+  field_name:
+    weight: -4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  entity_id: true
+  search_api_excerpt: true
+  uid: true
