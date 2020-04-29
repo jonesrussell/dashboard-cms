@@ -1,6 +1,6 @@
 {
-    "name": "vardot/varbase-project",
-    "description": "Project template for Varbase distribution.",
+    "name": "jonesrussell/dashboard-cms",
+    "description": "CMS for personal dahboard",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "authors": [
@@ -66,11 +66,13 @@
         "drupal/console-dotenv": "^0.3.1",
         "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/core-project-message": "^8.8.0",
+        "drupal/decoupled_router": "^1.11",
         "drupal/drupal-library-installer-plugin": "^0.3",
         "drupal/group": "^1.0",
         "drupal/mail_safety": "^1.0",
         "drupal/rdfui": "1.x-dev",
         "drupal/redis": "^1.4",
+        "drupal/subrequests": "^2.2",
         "drush/drush": "^9.0.0",
         "oomphinc/composer-installers-extender": "~1.0",
         "vardot/varbase": "~8.8.0",
@@ -270,5 +272,6 @@
                 "Fix constructor": "https://www.drupal.org/files/issues/2020-01-25/group-entity-type-manager-interface-3103884-6.patch"
             }
         }
-    }
+    },
+    "homepage": "https://github.com/jonesrussell/dashboard-cms"
 }
