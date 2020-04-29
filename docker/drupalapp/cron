@@ -1,0 +1,5 @@
+# Run Drupal cron once an hour with drush/drupal console.
+
+# TODO Choose a method and implement
+# 30 * * * * /var/www/html/bin/drush cron > /dev/null 2>&1
+# 30 * * * * /var/www/html/bin/drupal --root=/var/www/html/docroot cron:execute > /dev/null 2>&1

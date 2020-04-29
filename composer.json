@@ -69,6 +69,7 @@
         "drupal/decoupled_router": "^1.11",
         "drupal/drupal-library-installer-plugin": "^0.3",
         "drupal/group": "^1.0",
+        "drupal/json_ld_schema": "^1.0",
         "drupal/mail_safety": "^1.0",
         "drupal/rdfui": "1.x-dev",
         "drupal/redis": "^1.4",
