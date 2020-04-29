@@ -11,3 +11,5 @@ parameters:
     jsonlint: ~
     phpcs:
       standard: Drupal
+imports:
+  - { resource: vendor/drupol/drupal-conventions/config/drupal8/grumphp.yml }
