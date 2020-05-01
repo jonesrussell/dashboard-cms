@@ -12,7 +12,7 @@ ENV TZ=America/Toronto
 RUN ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime && echo ${TZ} > /etc/timezone
 
 RUN set -x \
-  && apt-get update && apt-get install -y gnupg gosu \
+  && apt-get update && apt-get install -y gnupg gosu cron \
   && apt-get -y autoremove \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
@@ -26,7 +26,7 @@ RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt
   && apt-get install -y curl zip unzip git supervisor sqlite3 zsh sudo \
   && apt-get install -y nginx php${PHPV}-fpm php${PHPV}-cli \
   php${PHPV}-pgsql php${PHPV}-sqlite3 php${PHPV}-gd \
-  php${PHPV}-curl php${PHPV}-memcached \
+  php${PHPV}-curl php${PHPV}-memcached php${PHPV}-mongodb \
   php${PHPV}-imap php${PHPV}-mysql php${PHPV}-mbstring \
   php${PHPV}-xml php${PHPV}-zip php${PHPV}-bcmath php${PHPV}-soap \
   php${PHPV}-intl php${PHPV}-readline php${PHPV}-xdebug \
@@ -72,6 +72,7 @@ RUN wget -O /usr/local/bin/drush https://github.com/drush-ops/drush-launcher/rel
   && chmod +x /usr/local/bin/drush
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY start-container /usr/local/bin/start-container
+COPY cron /etc/cron.d/vessel-drupal-cron
 RUN chmod +x /usr/local/bin/start-container
 
 ENTRYPOINT ["start-container"]

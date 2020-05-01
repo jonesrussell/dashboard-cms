@@ -27,7 +27,24 @@ services:
       - .:/var/www/html
     depends_on:
       - mysql
+      - nosql
       - redis
+
+  nosql:
+    image: 'mongo:latest'
+    # container_name: 'mongodb'
+    environment:
+      -MONGO_INITDB_DATABASE: "${MONGO_DATABASE}"
+      -MONGO_INITDB_ROOT_USERNAME: "${MONGO_USERNAME}"
+      -MONGO_INITDB_ROOT_PASSWORD: "${MONGO_PASSWORD}"
+    volumes:
+      # - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./vesselnosql:/data/db
+    ports:
+      # -'27017-27019:27017-27019'
+      - "${MONGO_HOST_PORT}:27017"
+    networks:
+      - vessel
 
   mysql:
     image: mysql:5.7
@@ -133,4 +150,5 @@ volumes:
     driver: "local"
   vesselminio:
     driver: "local"
-
+  vesselnosql:
+    driver: "local"
