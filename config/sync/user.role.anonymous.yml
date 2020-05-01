@@ -10,5 +10,6 @@ weight: -10
 is_admin: false
 permissions:
   - 'access content'
+  - 'debug simple_oauth tokens'
   - 'search content'
   - 'view media'
