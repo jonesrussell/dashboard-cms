@@ -3,3 +3,7 @@
 # TODO Choose a method and implement
 # 30 * * * * /var/www/html/bin/drush cron > /dev/null 2>&1
 # 30 * * * * /var/www/html/bin/drupal --root=/var/www/html/docroot cron:execute > /dev/null 2>&1
+
+# Call Drupal cron as user 'vessel'
+# 30 * * * * sudo -u vessel /var/www/html/bin/drupal --root=/var/www/html/docroot cron:execute > /dev/null 2>&1
+*/5 * * * * vessel /var/www/html/bin/drupal --root=/var/www/html/docroot cron:execute >> /tmp/cron.log 

@@ -58,3 +58,10 @@ drupal site:install varbase \
  --account-name="admin" \
  --account-mail="admin@example.com" \
  --account-pass="**password**"
+
+====
+TODO add to project
+"drupal/openapi_jsonapi": "^2.0",
+"mnsami/composer-custom-directory-installer": "^1.1",
+"vlucas/phpdotenv": "^4.0",
+"zaporylie/composer-drupal-optimizations": "^1.0"
