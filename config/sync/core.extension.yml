@@ -96,6 +96,7 @@ module:
   jsonapi: 0
   jsonapi_defaults: 0
   jsonapi_extras: 0
+  jsonapi_schema: 0
   layout_discovery: 0
   length_indicator: 0
   libraries: 0

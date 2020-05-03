@@ -2,16 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "vessel: 'drupal site:install'",
-      "type": "shell",
-      "command": "./vessel exec app ./bin/drupal site:install varbase --force --langcode='en'  --db-type='mysql'  --site-name='Dashboard CMS'  --site-mail='admin@example.com'  --account-name='admin'  --account-mail='admin@example.com'  --account-pass='p455w0rd'",
-      "isBackground": true,
-      "options": {
-        "cwd": "${workspaceRoot}"
-      }
-    },
-    {
-      "label": "vessel: start",
+      "label": "[vessel] start",
       "type": "shell",
       "command": "./vessel start",
       "isBackground": true,
@@ -20,7 +11,7 @@
       }
     },
     {
-      "label": "vessel: stop",
+      "label": "[vessel] stop",
       "type": "shell",
       "command": "./vessel stop",
       "isBackground": true,
@@ -29,7 +20,7 @@
       }
     },
     {
-      "label": "vessel: status",
+      "label": "[vessel] status",
       "type": "shell",
       "command": "./vessel",
       "options": {
@@ -37,25 +28,7 @@
       }
     },
     {
-      "label": "vessel: drush cr",
-      "type": "shell",
-      "command": "./vessel drush cr",
-      "isBackground": false,
-      "options": {
-        "cwd": "${workspaceRoot}"
-      }
-    },
-    {
-      "label": "vessel: drush updb",
-      "type": "shell",
-      "command": "./vessel drush updb",
-      "isBackground": false,
-      "options": {
-        "cwd": "${workspaceRoot}"
-      }
-    },
-    {
-      "label": "vessel: zsh",
+      "label": "[vessel] zsh",
       "type": "shell",
       "command": "./vessel exec --user vessel app zsh",
       "isBackground": false,
@@ -64,7 +37,7 @@
       }
     },
     {
-      "label": "vessel: update-varbase.sh",
+      "label": "[vessel] update-varbase.sh",
       "type": "shell",
       "command": "./vessel exec --user vessel app ./bin/update-varbase.sh",
       "isBackground": false,
@@ -73,10 +46,46 @@
       }
     },
     {
-      "label": "vessel: logs",
+      "label": "[vessel] logs",
       "type": "shell",
       "command": "./vessel logs -f",
       "isBackground": false,
+      "options": {
+        "cwd": "${workspaceRoot}"
+      }
+    },
+    {
+      "label": "[drush] config export (cex)",
+      "type": "shell",
+      "command": "./vessel drush cex",
+      "isBackground": false,
+      "options": {
+        "cwd": "${workspaceRoot}"
+      }
+    },
+    {
+      "label": "[drush] cache-rebuild (cr)",
+      "type": "shell",
+      "command": "./vessel drush cr",
+      "isBackground": false,
+      "options": {
+        "cwd": "${workspaceRoot}"
+      }
+    },
+    {
+      "label": "[drush] updatedb (updb)",
+      "type": "shell",
+      "command": "./vessel drush updb",
+      "isBackground": false,
+      "options": {
+        "cwd": "${workspaceRoot}"
+      }
+    },
+    {
+      "label": "[drupal-console] site:install",
+      "type": "shell",
+      "command": "./vessel exec app ./bin/drupal site:install varbase --force --langcode='en'  --db-type='mysql'  --site-name='Dashboard CMS'  --site-mail='admin@example.com'  --account-name='admin'  --account-mail='admin@example.com'  --account-pass='p455w0rd'",
+      "isBackground": true,
       "options": {
         "cwd": "${workspaceRoot}"
       }
