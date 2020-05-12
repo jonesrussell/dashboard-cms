@@ -9,6 +9,7 @@
   "settings": {
     "terminal.integrated.shell.linux": "/bin/zsh"
   },
+  "runArgs": [ "-v", "/var/run/docker.sock:/var/run/docker.sock"],
   "runServices": [
     "app",
     "mysql"
