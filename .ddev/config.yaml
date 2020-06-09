@@ -160,6 +160,19 @@ webimage_extra_packages: [php-mongodb]
 # information on the commands that can be extended and the tasks you can define
 # for them. Example:
 hooks:
+  pre-start:
+    # Install composer dependencies using composer on host system
+    - exec-host: "composer install"
+  post-start:
+    # Install Drupal after start if not installed already
+    - exec: "(drush status bootstrap | grep -q Successful) || drush site-install -y --profile=varbase --db-url=mysql://db:db@db/db"
+    # Generate a one-time login link for the admin account.
+    - exec: "drush uli 1"
   post-import-db:
-    - exec: drush cr
-#   - exec: drush updb
+    # Set the site name
+    - exec: "drush config-set system.site name 'Dashboard CMS'"
+    # Enable the environment indicator module
+    # - exec: "drush en -y environment_indicator"
+    # Clear the cache
+    - exec: "drush cr"
+
